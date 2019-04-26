@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { calculateShippingCost } from '../../utilities/utils';
 class ShippingLabelStep5 extends React.Component {
     constructor(props) {
         super(props);
@@ -39,11 +39,20 @@ class ShippingLabelStep5 extends React.Component {
     }
     renderShippingOption() {
         const { shipping_option } = this.state.shippingData;
-        return <div><h2>Shipping Option: </h2>{shipping_option === 1 ? 'Ground' : 'Priority'}</div>
+        return shipping_option ? <div><h2>Shipping Option: </h2>{shipping_option.shipping_option === 1 ? 'Ground' : 'Priority'}</div> : null;
     }
     renderWeight() {
+        console.log('in Weight: ', this.state.shippingData);
         const { weight } = this.state.shippingData;
-        return <div><h2>Package Weight: </h2>{weight}</div>
+        return weight ? <div><h2>Package Weight: </h2>{weight.weight}</div> : null;
+    } 
+    renderShippingCost() {
+        const { weight, shipping_option } = this.state.shippingData;
+        if(weight && shipping_option) {
+            const shippingCost = calculateShippingCost(weight.weight, shipping_option.shipping_option);
+            return <div><h2>Shipping Cost: </h2>${shippingCost}</div>;
+        }
+        return null;
     }
     render() {
         console.log('Step 5: ', this.state.shippingData);
@@ -54,6 +63,7 @@ class ShippingLabelStep5 extends React.Component {
                 {this.renderFrom()}
                 {this.renderWeight()}
                 {this.renderShippingOption()}
+                {this.renderShippingCost()}
             </div>
         ) : null;
     }

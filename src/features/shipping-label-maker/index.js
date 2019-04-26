@@ -1,14 +1,21 @@
 import React from 'react';
 import Wizard from '../../core/components/wizard'
-
+import ShippingLabel from '../shipping-label';
 class ShippingLabelMaker extends React.Component {
     constructor(props) {
         super(props);
         this.steps = [1,2,3,4,5];
-        this.wizardContext = {};
+        this.state = {
+            shippingData: {},
+            renderShippingLabel: false
+        };
     }
-    onComplete = () => {
-        console.log('on complete: ', this.props.wizardContext);
+    onComplete = (shippingData) => {
+        console.log('on complete: ', shippingData);
+        this.setState({
+            shippingData,
+            renderShippingLabel: true
+        });
     }
     header = () => {
         return (
@@ -16,14 +23,14 @@ class ShippingLabelMaker extends React.Component {
         );
     }
     render() {
-        return (
+        console.log('in render shipping label maker: ', this.state.shippingData);
+        return !this.state.renderShippingLabel ? (
             <Wizard
                 header={this.header}
                 steps={this.steps}
-                wizardContext={this.wizardContext}
                 onComplete={this.onComplete}
-            />
-        );
+            /> 
+        ) : <ShippingLabel shippingData={this.state.shippingData} />
     }
 }
 export default ShippingLabelMaker;

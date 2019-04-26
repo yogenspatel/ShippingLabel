@@ -9,47 +9,48 @@ import Step5 from '../../../features/shipping-label-maker/step5';
 class Wizard extends React.Component {
     constructor(props) {
         super(props);
+        console.log('constructor', this.props);
         this.state = {
             step: 1,
-            totalSteps: 5,
-            shippingData: {},
-            error: false
+            totalSteps: this.props.steps.length,
+            shippingData: {}
         }
+        this.error = false;
     }
     prevClick = () => {
         console.log('Prev Clicked');
-        if(!this.state.error && this.state.step !== 1) {
+        if(this.state.step !== 1) {
             this.setState({
                 step: this.state.step - 1
             });
         }
     }
     nextClick = () => {
-        console.log('next Clicked');
-        if(!this.state.error && this.state.step < this.state.totalSteps) {
+        console.log('next Clicked', this.state, this.error);
+
+        if(!this.error && this.state.step < this.state.totalSteps) {
             this.setState({
                 step: this.state.step + 1
             });
         }
         if(this.props.steps.length === this.state.step) {
-            this.props.onComplete();
+            this.props.onComplete(this.state.shippingData);
         }
     }
     getWizardContext = (data, from) => {
-        // console.log('Get Shipping Data: ', data);
-        if(data.error) {
-            this.setState({
-                error: true
-            });
+        console.log('Get Shipping Data: ', data);
+        if(!data || Object.keys(data.errorObj) > 0) {
+            this.error = true;
+            console.log('error: ', this.error);
         }
         else {
             let dataObj = data;
+            this.error = false;
             // dataObj[from] = data;
             // return { ...state, paginated_data: payload, noOfItems, pageSize, searchData };
             dataObj = {...this.state.shippingData, [from]: data};
             this.setState({
-                shippingData: dataObj,
-                error: false
+                shippingData: dataObj
             }, () => {
                 console.log('Shipping Data in state: ', this.state.shippingData);
             });
