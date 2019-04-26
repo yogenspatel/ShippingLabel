@@ -42,10 +42,12 @@ class ShippingLabelStep2 extends React.Component {
     }
     render() {
         return (
-            <React.Fragment>
-                <h2>Enter the Receiver's Address</h2>
-                {this.renderFormFields()}
-            </React.Fragment>
+            <div className='card'>
+                <div className='card-header'>Enter the Receiver's Address</div>
+                <div className='card-body'>
+                    {this.renderFormFields()}
+                </div>
+            </div>
         );
     }
 }

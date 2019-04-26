@@ -4,8 +4,12 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-        <ShippingLabelMaker />
+    <div className='container'>
+        <div className='row'>
+          <div className='col'>
+          <ShippingLabelMaker />
+          </div>
+        </div>
     </div>
   );
 }

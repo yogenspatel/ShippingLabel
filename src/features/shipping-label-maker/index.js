@@ -1,10 +1,10 @@
 import React from 'react';
 import Wizard from '../../core/components/wizard'
 import ShippingLabel from '../shipping-label';
+import { steps } from '../utilities/const';
 class ShippingLabelMaker extends React.Component {
     constructor(props) {
         super(props);
-        this.steps = [1,2,3,4,5];
         this.state = {
             shippingData: {},
             renderShippingLabel: false
@@ -19,7 +19,7 @@ class ShippingLabelMaker extends React.Component {
     }
     header = () => {
         return (
-            <h2>Shipping Label Maker</h2>
+            <header className='navbar navbar-expand-lg navbar-dark bg-primary'><p className='navbar-brand'>Shipping Label Maker</p></header>
         );
     }
     render() {
@@ -27,7 +27,7 @@ class ShippingLabelMaker extends React.Component {
         return !this.state.renderShippingLabel ? (
             <Wizard
                 header={this.header}
-                steps={this.steps}
+                steps={steps}
                 onComplete={this.onComplete}
             /> 
         ) : <ShippingLabel shippingData={this.state.shippingData} />

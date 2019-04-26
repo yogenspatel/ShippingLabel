@@ -2,7 +2,7 @@ import React from 'react';
 import { shippingRate } from './const';
 
 const renderError = (errormsg) => {
-    return (<span>{errormsg}</span>);
+    return (<small className="form-text text-muted alert alert-danger">{errormsg}</small>);
 }
 
 export const validateFormFields = (obj, context) => {
@@ -28,15 +28,18 @@ export const validateFormFields = (obj, context) => {
     }
 }
 export const RenderFormField = ({fieldName, type, placeHolder, onChange, context}) => (
-    <div>
-        <label>{fieldName}: </label>
+    <div className="input-group input-group-lg mb-3">
+        <div className="input-group-prepend">
+            <span className="input-group-text" id="basic-addon1">{fieldName}</span>
+        </div>
         <input name={fieldName}
+            className='form-control'
             type={type}
             placeholder={placeHolder}
             onChange={onChange}
             value={context.state[fieldName]}
         />
-        {context.state.errorObj[fieldName] && renderError(`${fieldName} is Required !`)}
+        {context.state.errorObj[fieldName] && renderError(`${fieldName} is required !`)}
     </div>
 );
 

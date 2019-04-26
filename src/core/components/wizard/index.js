@@ -58,7 +58,7 @@ class Wizard extends React.Component {
     }
     render() {
         return(
-            <React.Fragment>
+            <div className='container'>
                 {this.props.header()}
                 <ShippingProgress stepProgress={this.state.step} />
                 {this.state.step === 1 && <Step1 getShippingData={this.getWizardContext} setShippingData={this.state.shippingData} />}
@@ -66,9 +66,13 @@ class Wizard extends React.Component {
                 {this.state.step === 3 && <Step3 getShippingData={this.getWizardContext} setShippingData={this.state.shippingData} />}
                 {this.state.step === 4 && <Step4 getShippingData={this.getWizardContext} setShippingData={this.state.shippingData} />}
                 {this.state.step === 5 && <Step5 setShippingData={this.state.shippingData} />}
-                <button onClick={this.prevClick}>Prev</button>
-                <button onClick={this.nextClick}>{this.props.steps.length === this.state.step ? "Confirm" : "Next"}</button>
-            </React.Fragment>
+                <div className='card text-center'>
+                    <div className="card-footer">
+                        <button className='btn btn-primary mr-5' onClick={this.prevClick}>Prev</button>
+                        <button className='btn btn-primary' onClick={this.nextClick}>{this.props.steps.length === this.state.step ? "Confirm" : "Next"}</button>
+                    </div>
+                </div>
+            </div>
         );
     }
 }

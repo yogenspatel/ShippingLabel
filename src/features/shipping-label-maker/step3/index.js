@@ -25,16 +25,18 @@ class ShippingLabelStep3 extends React.Component {
     }
     render() {
         return (
-            <React.Fragment>
-                <h2>Enter the Package Weight: </h2>
-                <RenderFormField
-                    fieldName='weight'
-                    type='number'
-                    placeHolder='Enter Weight'
-                    onChange={(e) => setMetadata({e: e, context: this, key: this.key})}
-                    context={this}
-                />
-            </React.Fragment>
+            <div className='card'>
+                <div className='card-header'>Enter the Package Weight</div>
+                <div className='card-body'>
+                    <RenderFormField
+                        fieldName='weight'
+                        type='number'
+                        placeHolder='Enter Weight'
+                        onChange={(e) => setMetadata({e: e, context: this, key: this.key})}
+                        context={this}
+                    />
+                </div>
+            </div>
         );
     }
 }

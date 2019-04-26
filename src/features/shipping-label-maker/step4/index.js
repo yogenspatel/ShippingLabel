@@ -31,22 +31,30 @@ class ShippingLabelStep4 extends React.Component {
     }
     render() {
         return (
-            <React.Fragment>
-                <h2>Select the Shipping Option: </h2>
-                <input type="radio"
-                    value="1"
-                    name="shipping_option_1"
-                    onChange={this.setShippingOptionMetadata}
-                    checked={this.state.shipping_option === 1}
-                />{' '}Ground
-                <input
-                    type="radio"
-                    value="2"
-                    name="shipping_option_2"
-                    onChange={this.setShippingOptionMetadata}
-                    checked={this.state.shipping_option === 2}
-                />{' '}Priority
-            </React.Fragment>
+            <div className='card'>
+                <div className='card-header'>Select the Shipping Option</div>
+                <div className='card-body'>
+                    <div className='form-check'>
+                        <input 
+                            type="radio"
+                            value="1"
+                            name="shipping_option_1"
+                            onChange={this.setShippingOptionMetadata}
+                            checked={this.state.shipping_option === 1}
+                        />
+                        <label className="form-check-label ml-2">Ground</label>
+                    </div>
+                    <div className='form-check'>
+                        <input
+                            type="radio"
+                            value="2"
+                            name="shipping_option_2"
+                            onChange={this.setShippingOptionMetadata}
+                            checked={this.state.shipping_option === 2}
+                        /><label className="form-check-label ml-2">Priority</label>
+                    </div>
+                </div>
+            </div>
         );
     }
 }
