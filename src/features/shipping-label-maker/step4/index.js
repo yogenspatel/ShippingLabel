@@ -12,7 +12,6 @@ class ShippingLabelStep4 extends React.Component {
   }
 
   componentDidMount() {
-    console.log('Component did mount step4: ');
     this.props.getShippingData(this.state, this.key);
     if (this.props.setShippingData && this.props.setShippingData[this.key]) {
       const { shippingOption } = this.props.setShippingData[this.key];
@@ -25,7 +24,6 @@ class ShippingLabelStep4 extends React.Component {
   }
 
     setShippingOptionMetadata = (e) => {
-      console.log('setShippingOptionMetadata: ', e.currentTarget.value);
       this.setState({
         shippingOption: e.currentTarget.value * 1 // Convert to Int
       }, () => {

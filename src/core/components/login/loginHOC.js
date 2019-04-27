@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { checkIfUserLoggedInAction, doLoginAction } from '../../../features/utilities/utils';
+import { checkUserData } from '../../../features/utilities/utils';
 
 const LoginHOC = (PassedComponent) => {
   return class LoginParent extends Component {
@@ -10,24 +9,22 @@ const LoginHOC = (PassedComponent) => {
       this.state = {
         username: '',
         password: '',
-        isLoggedIn: false
+        isLoggedIn: false,
+        formSumbitted: false,
       };
       this.isLoggedIn = false;
     }
 
-    componentDidMount() {
-    //   const ifLoggedIn = checkIfUserLoggedInAction();
-    //   if (ifLoggedIn) {
-        
-    //   }
-    }
-
     handleOnChange = (e) => {
       const { name, value } = e.target;
-      console.log('handleOnChange: ', name, value);
       this.setState({
         [name]: value,
-      });
+        formSumbitted: false,
+      },() => {
+        if (e.keyCode === 13) {
+          this.handleOnSubmit(e);
+        }
+      }); 
     }
 
     handleOnSubmit = (e) => {
@@ -38,13 +35,14 @@ const LoginHOC = (PassedComponent) => {
         password
       };
       this.setState({
-        isLoggedIn: doLoginAction(data)
+        formSumbitted: true,
+        isLoggedIn: checkUserData(data)
       });
-    //   this.isLoggedIn = doLoginAction(data);
     }
 
     render() {
-      const { username, password, isLoggedIn } = this.state;
+      const { username, password, isLoggedIn, formSumbitted } = this.state;
+      const error = !isLoggedIn && formSumbitted;
       return (
         <PassedComponent
           username={username}
@@ -52,6 +50,7 @@ const LoginHOC = (PassedComponent) => {
           handleOnChange={this.handleOnChange}
           handleOnSubmit={this.handleOnSubmit}
           isLoggedIn={isLoggedIn}
+          error={error}
         />
       )
     }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { shippingRate } from './const';
 
-const renderError = (errormsg) => (<small className="form-text text-muted alert alert-danger">{errormsg}</small>)
+export const renderError = (errormsg) => (<small className="form-text text-muted alert alert-danger">{errormsg}</small>)
 
 export const validateFormFields = (obj, context) => {
   const stateValues = Object.values(obj);
@@ -50,14 +50,11 @@ export const setMetadata = ({ e, context, key }) => {
   });
 }
 export const calculateShippingCost = (weight, shippingOption) => parseFloat(weight * shippingRate * (shippingOption === 1 ? 1 : 1.5), 10).toFixed(2)
-export const doLoginAction = ({ username, password }) => {
+export const checkUserData = ({ username, password }) => {
   if(username === 'test' && password === 'test') {
     return true;
   }
   return false;
-}
-export const checkIfUserLoggedInAction = () => {
-  return true;
 }
 export const shippingData = {
     dataObj: {},

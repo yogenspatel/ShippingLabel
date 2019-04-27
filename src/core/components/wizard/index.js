@@ -76,12 +76,14 @@ class Wizard extends React.Component {
 
 Wizard.propTypes = {
   steps: PropTypes.array,
-  onComplete: PropTypes.func
+  onComplete: PropTypes.func,
+  header: PropTypes.func
 }
 
 Wizard.defaultProps = {
   steps: [],
-  onComplete: () => {}
+  onComplete: () => {},
+  header: () => {}
 }
 
 export default Wizard;

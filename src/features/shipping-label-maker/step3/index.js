@@ -13,7 +13,6 @@ class ShippingLabelStep3 extends React.Component {
   }
 
   componentDidMount() {
-    console.log('Component did mount step3: ', this.props.setShippingData);
     this.props.getShippingData(this.state, this.key);
     if (this.props.setShippingData && this.props.setShippingData[this.key]) {
       const { weight } = this.props.setShippingData[this.key];
