@@ -28,7 +28,7 @@ export const validateFormFields = (obj, context) => {
 export const RenderFormField = ({ fieldName, type, placeHolder, onChange, context }) => (
   <div className="input-group input-group-lg mb-3">
     <div className="input-group-prepend">
-      <span className="input-group-text" id="basic-addon1">{fieldName}</span>
+      <span className="input-group-text">{fieldName}</span>
     </div>
     <input
       name={fieldName}
@@ -50,3 +50,21 @@ export const setMetadata = ({ e, context, key }) => {
   });
 }
 export const calculateShippingCost = (weight, shippingOption) => parseFloat(weight * shippingRate * (shippingOption === 1 ? 1 : 1.5), 10).toFixed(2)
+export const doLoginAction = ({ username, password }) => {
+  if(username === 'test' && password === 'test') {
+    return true;
+  }
+  return false;
+}
+export const checkIfUserLoggedInAction = () => {
+  return true;
+}
+export const shippingData = {
+    dataObj: {},
+    get data() {
+      return this.dataObj;
+    },
+    set data(dataObj) {
+      this.dataObj = dataObj;
+    }
+}

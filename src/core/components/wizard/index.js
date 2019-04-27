@@ -6,7 +6,7 @@ import Step2 from '../../../features/shipping-label-maker/step2';
 import Step3 from '../../../features/shipping-label-maker/step3';
 import Step4 from '../../../features/shipping-label-maker/step4';
 import Step5 from '../../../features/shipping-label-maker/step5';
-
+import { shippingData } from '../../../features/utilities/utils'
 
 class Wizard extends React.Component {
   constructor(props) {
@@ -34,7 +34,8 @@ class Wizard extends React.Component {
         });
       }
       if (this.props.steps.length === this.state.step) {
-        this.props.onComplete(this.state.shippingData);
+        shippingData.data = this.state.shippingData;
+        this.props.onComplete();
       }
     }
 
@@ -56,7 +57,6 @@ class Wizard extends React.Component {
     render() {
       return (
         <div className="container">
-          {this.props.header()}
           <ShippingProgress stepProgress={this.state.step} />
           {this.state.step === 1 && <Step1 getShippingData={this.getWizardContext} setShippingData={this.state.shippingData} />}
           {this.state.step === 2 && <Step2 getShippingData={this.getWizardContext} setShippingData={this.state.shippingData} />}
@@ -75,13 +75,11 @@ class Wizard extends React.Component {
 }
 
 Wizard.propTypes = {
-  header: PropTypes.func,
   steps: PropTypes.array,
   onComplete: PropTypes.func
 }
 
 Wizard.defaultProps = {
-  header: () => {},
   steps: [],
   onComplete: () => {}
 }

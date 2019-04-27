@@ -1,5 +1,5 @@
 import React from 'react';
-import ShippingLabelMaker from './features/shipping-label-maker';
+import Login from './core/components/login/login';
 import './App.css';
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <div className="container">
       <div className="row">
         <div className="col">
-          <ShippingLabelMaker />
+          <Login />
         </div>
       </div>
     </div>
