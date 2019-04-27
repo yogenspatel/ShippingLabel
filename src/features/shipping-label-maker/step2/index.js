@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { validateFormFields, RenderFormField, setMetadata } from '../../../utilities/utils';
-import { formValidationRules } from '../../../utilities/const';
+import { formValidationRules, fromToFormFields } from '../../../utilities/const';
 
 class ShippingLabelStep2 extends React.Component {
   constructor(props) {
     super(props);
-    this.key = 'from';
+    this.key = "from";
     this.state = {
-      name: '',
-      street: '',
-      city: '',
-      state: '',
-      zip: '', 
+      name: "",
+      street: "",
+      city: "",
+      state: "",
+      zip: "", 
       errorObj: formValidationRules[this.key]
     }
   }
@@ -31,8 +31,7 @@ class ShippingLabelStep2 extends React.Component {
   }
     
     renderFormFields = () => {
-      const formFields = ['name', 'street', 'city', 'state', 'zip'];
-      return formFields.map((fieldName, i) => (
+      return fromToFormFields.map((fieldName, i) => (
         <RenderFormField
           key={`receiver_${i}`}
           fieldName={fieldName}

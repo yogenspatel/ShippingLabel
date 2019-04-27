@@ -6,7 +6,7 @@ import { formValidationRules } from '../../../utilities/const';
 class ShippingLabelStep3 extends React.Component {
   constructor(props) {
     super(props);
-    this.key = 'weight';
+    this.key = "weight";
     this.state = {
       weight: 0,
       errorObj: formValidationRules[this.key]

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 class ShippingLabelStep4 extends React.Component {
   constructor(props) {
     super(props);
-    this.key = 'shippingOption';
+    this.key = "shippingOption";
     this.state = {
       shippingOption: 1,
       errorObj: {}
