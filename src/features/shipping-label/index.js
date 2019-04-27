@@ -74,7 +74,7 @@ class ShippingLabel extends React.Component {
   render() {
     return this.props.shippingData ? (
       <div className="card">
-        <div className="card-header">Shipping Label</div>
+        <div className="navbar navbar-expand-lg navbar-dark bg-primary card-header"><h1 className="h1 text-white m-auto">Shipping Label</h1></div>
         <div className="card-body">
           <button className="btn btn-primary mb-3" onClick={() => window.print()}>Print this Label</button>
           <div className="row mb-3">

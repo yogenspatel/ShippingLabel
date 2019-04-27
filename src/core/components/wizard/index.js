@@ -65,8 +65,8 @@ class Wizard extends React.Component {
           {this.state.step === 5 && <Step5 setShippingData={this.state.shippingData} />}
           <div className="card text-center">
             <div className="card-footer">
-              <button className="btn btn-primary mr-5" onClick={this.prevClick}>Prev</button>
-              <button className="btn btn-primary" onClick={this.nextClick}>{this.props.steps.length === this.state.step ? 'Confirm' : 'Next'}</button>
+              <button className="btn btn-primary mr-5" onClick={this.prevClick}><span className="h4">Prev</span></button>
+              <button className="btn btn-primary" onClick={this.nextClick}>{this.props.steps.length === this.state.step ? <span className="h4">Confirm</span> : <span className="h4">Next</span>}</button>
             </div>
           </div>
         </div>
