@@ -1,7 +1,7 @@
 import React from 'react';
 import LoginHOC from './loginHOC';
 import ShippingLabelMaker from '../../../features/shipping-label-maker';
-import { renderError } from '../../../features/utilities/utils';
+import { renderError } from '../../../utilities/utils';
 
 const Login = ({ username, password, handleOnChange, handleOnSubmit, isLoggedIn, error }) => {
   return !isLoggedIn ? (

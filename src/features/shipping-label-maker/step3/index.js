@@ -1,15 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { validateFormFields, RenderFormField, setMetadata } from '../../utilities/utils';
+import { validateFormFields, RenderFormField, setMetadata } from '../../../utilities/utils';
+import { formValidationRules } from '../../../utilities/const';
 
 class ShippingLabelStep3 extends React.Component {
   constructor(props) {
     super(props);
+    this.key = 'weight';
     this.state = {
       weight: 0,
-      errorObj: {}
+      errorObj: formValidationRules[this.key]
     }
-    this.key = 'weight';
+    
   }
 
   componentDidMount() {

@@ -1,8 +1,8 @@
 import React from 'react';
 import Wizard from '../../core/components/wizard'
 import ShippingLabel from '../shipping-label';
-import { steps } from '../utilities/const';
-import { shippingData } from '../utilities/utils';
+import { steps } from '../../utilities/const';
+import { shippingData } from '../../utilities/utils';
 
 class ShippingLabelMaker extends React.Component {
   constructor(props) {
@@ -14,6 +14,7 @@ class ShippingLabelMaker extends React.Component {
   }
 
   onComplete = () => {
+    console.log('onComplete: ', shippingData.data);
     this.setState({
       shippingData: shippingData.data,
       renderShippingLabel: true

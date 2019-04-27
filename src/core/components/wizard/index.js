@@ -6,19 +6,18 @@ import Step2 from '../../../features/shipping-label-maker/step2';
 import Step3 from '../../../features/shipping-label-maker/step3';
 import Step4 from '../../../features/shipping-label-maker/step4';
 import Step5 from '../../../features/shipping-label-maker/step5';
-import { shippingData } from '../../../features/utilities/utils'
+import { shippingData } from '../../../utilities/utils'
 
 class Wizard extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      step: 1,
-      totalSteps: this.props.steps.length,
-      shippingData: {}
+    constructor(props) {
+      super(props);
+      this.state = {
+        step: 1,
+        totalSteps: this.props.steps.length,
+        shippingData: {}
+      }
+      this.error = false;
     }
-    this.error = false;
-  }
-
     prevClick = () => {
       if (this.state.step !== 1) {
         this.setState({
@@ -26,7 +25,6 @@ class Wizard extends React.Component {
         });
       }
     }
-
     nextClick = () => {
       if (!this.error && this.state.step < this.state.totalSteps) {
         this.setState({
@@ -34,26 +32,23 @@ class Wizard extends React.Component {
         });
       }
       if (this.props.steps.length === this.state.step) {
+        console.log('Steps completed: ', this.state.shippingData);
         shippingData.data = this.state.shippingData;
         this.props.onComplete();
       }
     }
-
     getWizardContext = (data, from) => {
-      if (!data || Object.keys(data.errorObj) > 0) {
+      if (Object.keys(data.errorObj).length > 0) {
         this.error = true;
       } else {
         let dataObj = data;
         this.error = false;
-        // dataObj[from] = data;
-        // return { ...state, paginated_data: payload, noOfItems, pageSize, searchData };
         dataObj = { ...this.state.shippingData, [from]: data };
         this.setState({
           shippingData: dataObj
         });
       }
     }
-
     render() {
       return (
         <div className="container">

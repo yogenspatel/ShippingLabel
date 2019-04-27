@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { calculateShippingCost } from '../../utilities/utils';
+import { calculateShippingCost } from '../../../utilities/utils';
 
 class ShippingLabelStep5 extends React.Component {
   constructor(props) {

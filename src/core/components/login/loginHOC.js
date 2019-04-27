@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { checkUserData } from '../../../features/utilities/utils';
+import { checkUserData } from '../../../utilities/utils';
 
 const LoginHOC = (PassedComponent) => {
   return class LoginParent extends Component {

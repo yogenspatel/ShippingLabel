@@ -1,19 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { validateFormFields, RenderFormField, setMetadata } from '../../utilities/utils';
-
+import { validateFormFields, RenderFormField, setMetadata } from '../../../utilities/utils';
+import { formValidationRules } from '../../../utilities/const';
 class ShippingLabelStep1 extends React.Component {
   constructor(props) {
     super(props);
+    this.key = 'to';
     this.state = {
       name: '',
       street: '',
       city: '',
       state: '',
       zip: '', 
-      errorObj: {}
+      errorObj: formValidationRules[this.key]
     }
-    this.key = 'to';
+    
   }
 
   componentDidMount() {

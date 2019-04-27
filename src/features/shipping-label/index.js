@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { calculateShippingCost } from '../utilities/utils';
+import { calculateShippingCost } from '../../utilities/utils';
 
 class ShippingLabel extends React.Component {
   renderFrom() {
