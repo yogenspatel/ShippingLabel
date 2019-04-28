@@ -25,12 +25,13 @@ export const validateFormFields = (obj, context) => {
   });  
     
 }
-export const RenderFormField = ({ fieldName, type, placeHolder, onChange, context }) => (
+export const RenderFormField = ({ id, fieldName, type, placeHolder, onChange, context }) => (
   <div className="input-group input-group-lg mb-3">
     <div className="input-group-prepend">
       <span className="input-group-text">{fieldName}</span>
     </div>
     <input
+      id={id}
       name={fieldName}
       className="form-control"
       type={type}

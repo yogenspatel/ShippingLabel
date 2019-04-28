@@ -4,8 +4,14 @@ import ShippingLabelMaker from '../../../features/shipping-label-maker';
 import { renderError } from '../../../utilities/utils';
 
 class Login extends React.Component {
+  constructor(props) {
+    super(props);
+    this.userNameInput = null;
+  }
   componentDidMount() {
-    this.userNameInput.focus();
+    setTimeout(() => {
+      this.userNameInput.focus();
+    }, 200);
   }
   render() {
     const { username, password, handleOnChange, handleOnSubmit, isLoggedIn, error } = this.props;
@@ -41,12 +47,12 @@ class Login extends React.Component {
             />
           </div>
           <div className="text-center mb-3">
-            <input className="btn btn-primary" type="submit" value="Login" />
+            <input className="btn btn-primary form-submit" type="submit" value="Login" />
           </div>
         </form>
       </div>
     ) : <ShippingLabelMaker />; 
   }
 } 
-
+export { Login };
 export default (LoginHOC(Login));

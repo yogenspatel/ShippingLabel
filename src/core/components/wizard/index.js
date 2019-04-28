@@ -14,9 +14,9 @@ class Wizard extends React.Component {
       this.state = {
         step: 1,
         totalSteps: this.props.steps.length,
-        shippingData: {}
+        shippingData: {},
+        error: false
       }
-      this.error = false;
     }
     prevClick = () => {
       if (this.state.step !== 1) {
@@ -26,26 +26,27 @@ class Wizard extends React.Component {
       }
     }
     nextClick = () => {
-      if (!this.error && this.state.step < this.state.totalSteps) {
+      if (!this.state.error && this.state.step < this.state.totalSteps) {
         this.setState({
           step: this.state.step + 1
         });
       }
       if (this.props.steps.length === this.state.step) {
-        console.log('Steps completed: ', this.state.shippingData);
         shippingData.data = this.state.shippingData;
         this.props.onComplete();
       }
     }
     getWizardContext = (data, from) => {
       if (Object.keys(data.errorObj).length > 0) {
-        this.error = true;
+        this.setState({
+          error: true
+        });
       } else {
         let dataObj = data;
-        this.error = false;
         dataObj = { ...this.state.shippingData, [from]: data };
         this.setState({
-          shippingData: dataObj
+          shippingData: dataObj,
+          error: false
         });
       }
     }
@@ -60,8 +61,8 @@ class Wizard extends React.Component {
           {this.state.step === 5 && <Step5 setShippingData={this.state.shippingData} />}
           <div className="card text-center">
             <div className="card-footer">
-              <button className="btn btn-primary mr-5" onClick={this.prevClick}><span className="h4">Prev</span></button>
-              <button className="btn btn-primary" onClick={this.nextClick}>{this.props.steps.length === this.state.step ? <span className="h4">Confirm</span> : <span className="h4">Next</span>}</button>
+              <button className="btn btn-primary mr-5 prev" onClick={this.prevClick}><span className="h4">Prev</span></button>
+              <button className="btn btn-primary next" onClick={this.nextClick}>{this.props.steps.length === this.state.step ? <span className="h4">Confirm</span> : <span className="h4">Next</span>}</button>
             </div>
           </div>
         </div>
@@ -71,14 +72,12 @@ class Wizard extends React.Component {
 
 Wizard.propTypes = {
   steps: PropTypes.array,
-  onComplete: PropTypes.func,
-  header: PropTypes.func
+  onComplete: PropTypes.func
 }
 
 Wizard.defaultProps = {
   steps: [],
-  onComplete: () => {},
-  header: () => {}
+  onComplete: () => {}
 }
 
 export default Wizard;

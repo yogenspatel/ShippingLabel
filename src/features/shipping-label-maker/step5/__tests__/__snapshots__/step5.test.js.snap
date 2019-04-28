@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Step 5 Component renders correctly has called snapshot with ShippingLabel component 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="h4 card-header"
+  >
+    Confirm
+  </div>
+  <div
+    className="card-body"
+  >
+    <div
+      className="row mb-3"
+    >
+      <div
+        className="col-sm-6"
+      >
+        <div
+          className="card"
+        >
+          <div
+            className="h5 card-header"
+          >
+            To:
+          </div>
+          <div
+            className="card-body"
+          >
+            <p>
+              Name: 
+              test 1 to
+            </p>
+            <p>
+              Address: 
+              test street 1 to
+            </p>
+            <p>
+              City: 
+              test city 1 to
+            </p>
+            <p>
+              State: 
+              test state 1 to
+               zip: 
+              test zip 44444 to
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="col-sm-6"
+      >
+        <div
+          className="card"
+        >
+          <div
+            className="h5 card-header"
+          >
+            From:
+          </div>
+          <div
+            className="card-body"
+          >
+            <p>
+              Name: 
+              test 2 from
+            </p>
+            <p>
+              Address: 
+              test street 2 from
+            </p>
+            <p>
+              City: 
+              test city 2 from
+            </p>
+            <p>
+              State: 
+              test state 2 from
+               zip: 
+              test zip 44444 2 from
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="card"
+    >
+      <div
+        className="card-header"
+      >
+        <span
+          className="h5"
+        >
+          Package Weight:
+        </span>
+         
+        5
+      </div>
+    </div>
+    <div
+      className="card"
+    >
+      <div
+        className="card-header"
+      >
+        <span
+          className="h5"
+        >
+          Shipping Option:
+        </span>
+         
+        Priority
+      </div>
+    </div>
+    <div
+      className="card"
+    >
+      <div
+        className="h5 card-header"
+      >
+        Shipping Cost: $
+        3.00
+      </div>
+    </div>
+  </div>
+</div>
+`;

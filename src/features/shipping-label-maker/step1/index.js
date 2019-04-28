@@ -34,6 +34,7 @@ class ShippingLabelStep1 extends React.Component {
       return fromToFormFields.map((fieldName, i) => (
         <RenderFormField
           key={`sender_${i}`}
+          id={`sender_${i}`}
           fieldName={fieldName}
           type="text"
           placeHolder={`Enter ${fieldName}`}

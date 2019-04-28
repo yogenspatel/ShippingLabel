@@ -14,7 +14,6 @@ class ShippingLabelMaker extends React.Component {
   }
 
   onComplete = () => {
-    console.log('onComplete: ', shippingData.data);
     this.setState({
       shippingData: shippingData.data,
       renderShippingLabel: true

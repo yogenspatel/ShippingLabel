@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Wizard Component renders correctly has called snapshot with Wizard component 1`] = `
+<div
+  className="container"
+>
+  <ShippingProgress
+    stepProgress={1}
+  />
+  <ShippingLabelStep1
+    getShippingData={[Function]}
+    setShippingData={Object {}}
+  />
+  <div
+    className="card text-center"
+  >
+    <div
+      className="card-footer"
+    >
+      <button
+        className="btn btn-primary mr-5 prev"
+        onClick={[Function]}
+      >
+        <span
+          className="h4"
+        >
+          Prev
+        </span>
+      </button>
+      <button
+        className="btn btn-primary next"
+        onClick={[Function]}
+      >
+        <span
+          className="h4"
+        >
+          Next
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+`;

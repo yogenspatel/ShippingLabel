@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login Component renders correctly has called snapshot with Logged in component 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-header text-center h3"
+  >
+    Login (Username = test | Password = test)
+  </div>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="input-group input-group-lg mb-3 ml-5 mt-5 pr-5"
+    >
+      <div
+        className="input-group-prepend"
+      >
+        <span
+          className="input-group-text"
+        >
+          Username
+        </span>
+      </div>
+      <input
+        autoComplete="new-username"
+        className="form-control"
+        name="username"
+        onChange={[Function]}
+        type="text"
+        value="test"
+      />
+    </div>
+    <div
+      className="input-group input-group-lg mb-3 ml-5 pr-5"
+    >
+      <div
+        className="input-group-prepend"
+      >
+        <span
+          className="input-group-text"
+        >
+          Password
+        </span>
+      </div>
+      <input
+        autoComplete="new-password"
+        className="form-control"
+        name="password"
+        onChange={[Function]}
+        type="password"
+        value="test"
+      />
+    </div>
+    <div
+      className="text-center mb-3"
+    >
+      <input
+        className="btn btn-primary form-submit"
+        type="submit"
+        value="Login"
+      />
+    </div>
+  </form>
+</div>
+`;

@@ -1,0 +1,627 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Step 1 Component renders correctly has called snapshot with ShippingLabel component 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="h4 card-header"
+  >
+    Enter the Sender‘s Address
+  </div>
+  <div
+    className="card-body"
+  >
+    <RenderFormField
+      context={
+        ShippingLabelStep1 {
+          "context": Object {},
+          "key": "to",
+          "props": Object {
+            "getShippingData": [Function],
+            "setShippingData": Object {},
+          },
+          "refs": Object {},
+          "renderFormFields": [Function],
+          "setState": [Function],
+          "state": Object {
+            "city": "",
+            "errorObj": Object {
+              "city": true,
+              "name": true,
+              "state": true,
+              "street": true,
+              "zip": true,
+            },
+            "name": "",
+            "state": "",
+            "street": "",
+            "zip": "",
+          },
+          "updater": Updater {
+            "_callbacks": Array [],
+            "_renderer": ReactShallowRenderer {
+              "_context": Object {},
+              "_didScheduleRenderPhaseUpdate": false,
+              "_dispatcher": Object {
+                "readContext": [Function],
+                "useCallback": [Function],
+                "useContext": [Function],
+                "useDebugValue": [Function],
+                "useEffect": [Function],
+                "useImperativeHandle": [Function],
+                "useLayoutEffect": [Function],
+                "useMemo": [Function],
+                "useReducer": [Function],
+                "useRef": [Function],
+                "useState": [Function],
+              },
+              "_element": <ShippingLabelStep1
+                getShippingData={[Function]}
+                setShippingData={Object {}}
+              />,
+              "_firstWorkInProgressHook": null,
+              "_forcedUpdate": false,
+              "_instance": [Circular],
+              "_isReRender": false,
+              "_newState": null,
+              "_numberOfReRenders": 0,
+              "_renderPhaseUpdates": null,
+              "_rendered": <div
+                className="card"
+              >
+                <div
+                  className="h4 card-header"
+                >
+                  Enter the Sender‘s Address
+                </div>
+                <div
+                  className="card-body"
+                >
+                  <RenderFormField
+                    context={[Circular]}
+                    fieldName="name"
+                    id="sender_0"
+                    onChange={[Function]}
+                    placeHolder="Enter name"
+                    type="text"
+                  />
+                  <RenderFormField
+                    context={[Circular]}
+                    fieldName="street"
+                    id="sender_1"
+                    onChange={[Function]}
+                    placeHolder="Enter street"
+                    type="text"
+                  />
+                  <RenderFormField
+                    context={[Circular]}
+                    fieldName="city"
+                    id="sender_2"
+                    onChange={[Function]}
+                    placeHolder="Enter city"
+                    type="text"
+                  />
+                  <RenderFormField
+                    context={[Circular]}
+                    fieldName="state"
+                    id="sender_3"
+                    onChange={[Function]}
+                    placeHolder="Enter state"
+                    type="text"
+                  />
+                  <RenderFormField
+                    context={[Circular]}
+                    fieldName="zip"
+                    id="sender_4"
+                    onChange={[Function]}
+                    placeHolder="Enter zip"
+                    type="text"
+                  />
+                </div>
+              </div>,
+              "_rendering": false,
+              "_updater": [Circular],
+              "_workInProgressHook": null,
+            },
+          },
+        }
+      }
+      fieldName="name"
+      id="sender_0"
+      key="sender_0"
+      onChange={[Function]}
+      placeHolder="Enter name"
+      type="text"
+    />
+    <RenderFormField
+      context={
+        ShippingLabelStep1 {
+          "context": Object {},
+          "key": "to",
+          "props": Object {
+            "getShippingData": [Function],
+            "setShippingData": Object {},
+          },
+          "refs": Object {},
+          "renderFormFields": [Function],
+          "setState": [Function],
+          "state": Object {
+            "city": "",
+            "errorObj": Object {
+              "city": true,
+              "name": true,
+              "state": true,
+              "street": true,
+              "zip": true,
+            },
+            "name": "",
+            "state": "",
+            "street": "",
+            "zip": "",
+          },
+          "updater": Updater {
+            "_callbacks": Array [],
+            "_renderer": ReactShallowRenderer {
+              "_context": Object {},
+              "_didScheduleRenderPhaseUpdate": false,
+              "_dispatcher": Object {
+                "readContext": [Function],
+                "useCallback": [Function],
+                "useContext": [Function],
+                "useDebugValue": [Function],
+                "useEffect": [Function],
+                "useImperativeHandle": [Function],
+                "useLayoutEffect": [Function],
+                "useMemo": [Function],
+                "useReducer": [Function],
+                "useRef": [Function],
+                "useState": [Function],
+              },
+              "_element": <ShippingLabelStep1
+                getShippingData={[Function]}
+                setShippingData={Object {}}
+              />,
+              "_firstWorkInProgressHook": null,
+              "_forcedUpdate": false,
+              "_instance": [Circular],
+              "_isReRender": false,
+              "_newState": null,
+              "_numberOfReRenders": 0,
+              "_renderPhaseUpdates": null,
+              "_rendered": <div
+                className="card"
+              >
+                <div
+                  className="h4 card-header"
+                >
+                  Enter the Sender‘s Address
+                </div>
+                <div
+                  className="card-body"
+                >
+                  <RenderFormField
+                    context={[Circular]}
+                    fieldName="name"
+                    id="sender_0"
+                    onChange={[Function]}
+                    placeHolder="Enter name"
+                    type="text"
+                  />
+                  <RenderFormField
+                    context={[Circular]}
+                    fieldName="street"
+                    id="sender_1"
+                    onChange={[Function]}
+                    placeHolder="Enter street"
+                    type="text"
+                  />
+                  <RenderFormField
+                    context={[Circular]}
+                    fieldName="city"
+                    id="sender_2"
+                    onChange={[Function]}
+                    placeHolder="Enter city"
+                    type="text"
+                  />
+                  <RenderFormField
+                    context={[Circular]}
+                    fieldName="state"
+                    id="sender_3"
+                    onChange={[Function]}
+                    placeHolder="Enter state"
+                    type="text"
+                  />
+                  <RenderFormField
+                    context={[Circular]}
+                    fieldName="zip"
+                    id="sender_4"
+                    onChange={[Function]}
+                    placeHolder="Enter zip"
+                    type="text"
+                  />
+                </div>
+              </div>,
+              "_rendering": false,
+              "_updater": [Circular],
+              "_workInProgressHook": null,
+            },
+          },
+        }
+      }
+      fieldName="street"
+      id="sender_1"
+      key="sender_1"
+      onChange={[Function]}
+      placeHolder="Enter street"
+      type="text"
+    />
+    <RenderFormField
+      context={
+        ShippingLabelStep1 {
+          "context": Object {},
+          "key": "to",
+          "props": Object {
+            "getShippingData": [Function],
+            "setShippingData": Object {},
+          },
+          "refs": Object {},
+          "renderFormFields": [Function],
+          "setState": [Function],
+          "state": Object {
+            "city": "",
+            "errorObj": Object {
+              "city": true,
+              "name": true,
+              "state": true,
+              "street": true,
+              "zip": true,
+            },
+            "name": "",
+            "state": "",
+            "street": "",
+            "zip": "",
+          },
+          "updater": Updater {
+            "_callbacks": Array [],
+            "_renderer": ReactShallowRenderer {
+              "_context": Object {},
+              "_didScheduleRenderPhaseUpdate": false,
+              "_dispatcher": Object {
+                "readContext": [Function],
+                "useCallback": [Function],
+                "useContext": [Function],
+                "useDebugValue": [Function],
+                "useEffect": [Function],
+                "useImperativeHandle": [Function],
+                "useLayoutEffect": [Function],
+                "useMemo": [Function],
+                "useReducer": [Function],
+                "useRef": [Function],
+                "useState": [Function],
+              },
+              "_element": <ShippingLabelStep1
+                getShippingData={[Function]}
+                setShippingData={Object {}}
+              />,
+              "_firstWorkInProgressHook": null,
+              "_forcedUpdate": false,
+              "_instance": [Circular],
+              "_isReRender": false,
+              "_newState": null,
+              "_numberOfReRenders": 0,
+              "_renderPhaseUpdates": null,
+              "_rendered": <div
+                className="card"
+              >
+                <div
+                  className="h4 card-header"
+                >
+                  Enter the Sender‘s Address
+                </div>
+                <div
+                  className="card-body"
+                >
+                  <RenderFormField
+                    context={[Circular]}
+                    fieldName="name"
+                    id="sender_0"
+                    onChange={[Function]}
+                    placeHolder="Enter name"
+                    type="text"
+                  />
+                  <RenderFormField
+                    context={[Circular]}
+                    fieldName="street"
+                    id="sender_1"
+                    onChange={[Function]}
+                    placeHolder="Enter street"
+                    type="text"
+                  />
+                  <RenderFormField
+                    context={[Circular]}
+                    fieldName="city"
+                    id="sender_2"
+                    onChange={[Function]}
+                    placeHolder="Enter city"
+                    type="text"
+                  />
+                  <RenderFormField
+                    context={[Circular]}
+                    fieldName="state"
+                    id="sender_3"
+                    onChange={[Function]}
+                    placeHolder="Enter state"
+                    type="text"
+                  />
+                  <RenderFormField
+                    context={[Circular]}
+                    fieldName="zip"
+                    id="sender_4"
+                    onChange={[Function]}
+                    placeHolder="Enter zip"
+                    type="text"
+                  />
+                </div>
+              </div>,
+              "_rendering": false,
+              "_updater": [Circular],
+              "_workInProgressHook": null,
+            },
+          },
+        }
+      }
+      fieldName="city"
+      id="sender_2"
+      key="sender_2"
+      onChange={[Function]}
+      placeHolder="Enter city"
+      type="text"
+    />
+    <RenderFormField
+      context={
+        ShippingLabelStep1 {
+          "context": Object {},
+          "key": "to",
+          "props": Object {
+            "getShippingData": [Function],
+            "setShippingData": Object {},
+          },
+          "refs": Object {},
+          "renderFormFields": [Function],
+          "setState": [Function],
+          "state": Object {
+            "city": "",
+            "errorObj": Object {
+              "city": true,
+              "name": true,
+              "state": true,
+              "street": true,
+              "zip": true,
+            },
+            "name": "",
+            "state": "",
+            "street": "",
+            "zip": "",
+          },
+          "updater": Updater {
+            "_callbacks": Array [],
+            "_renderer": ReactShallowRenderer {
+              "_context": Object {},
+              "_didScheduleRenderPhaseUpdate": false,
+              "_dispatcher": Object {
+                "readContext": [Function],
+                "useCallback": [Function],
+                "useContext": [Function],
+                "useDebugValue": [Function],
+                "useEffect": [Function],
+                "useImperativeHandle": [Function],
+                "useLayoutEffect": [Function],
+                "useMemo": [Function],
+                "useReducer": [Function],
+                "useRef": [Function],
+                "useState": [Function],
+              },
+              "_element": <ShippingLabelStep1
+                getShippingData={[Function]}
+                setShippingData={Object {}}
+              />,
+              "_firstWorkInProgressHook": null,
+              "_forcedUpdate": false,
+              "_instance": [Circular],
+              "_isReRender": false,
+              "_newState": null,
+              "_numberOfReRenders": 0,
+              "_renderPhaseUpdates": null,
+              "_rendered": <div
+                className="card"
+              >
+                <div
+                  className="h4 card-header"
+                >
+                  Enter the Sender‘s Address
+                </div>
+                <div
+                  className="card-body"
+                >
+                  <RenderFormField
+                    context={[Circular]}
+                    fieldName="name"
+                    id="sender_0"
+                    onChange={[Function]}
+                    placeHolder="Enter name"
+                    type="text"
+                  />
+                  <RenderFormField
+                    context={[Circular]}
+                    fieldName="street"
+                    id="sender_1"
+                    onChange={[Function]}
+                    placeHolder="Enter street"
+                    type="text"
+                  />
+                  <RenderFormField
+                    context={[Circular]}
+                    fieldName="city"
+                    id="sender_2"
+                    onChange={[Function]}
+                    placeHolder="Enter city"
+                    type="text"
+                  />
+                  <RenderFormField
+                    context={[Circular]}
+                    fieldName="state"
+                    id="sender_3"
+                    onChange={[Function]}
+                    placeHolder="Enter state"
+                    type="text"
+                  />
+                  <RenderFormField
+                    context={[Circular]}
+                    fieldName="zip"
+                    id="sender_4"
+                    onChange={[Function]}
+                    placeHolder="Enter zip"
+                    type="text"
+                  />
+                </div>
+              </div>,
+              "_rendering": false,
+              "_updater": [Circular],
+              "_workInProgressHook": null,
+            },
+          },
+        }
+      }
+      fieldName="state"
+      id="sender_3"
+      key="sender_3"
+      onChange={[Function]}
+      placeHolder="Enter state"
+      type="text"
+    />
+    <RenderFormField
+      context={
+        ShippingLabelStep1 {
+          "context": Object {},
+          "key": "to",
+          "props": Object {
+            "getShippingData": [Function],
+            "setShippingData": Object {},
+          },
+          "refs": Object {},
+          "renderFormFields": [Function],
+          "setState": [Function],
+          "state": Object {
+            "city": "",
+            "errorObj": Object {
+              "city": true,
+              "name": true,
+              "state": true,
+              "street": true,
+              "zip": true,
+            },
+            "name": "",
+            "state": "",
+            "street": "",
+            "zip": "",
+          },
+          "updater": Updater {
+            "_callbacks": Array [],
+            "_renderer": ReactShallowRenderer {
+              "_context": Object {},
+              "_didScheduleRenderPhaseUpdate": false,
+              "_dispatcher": Object {
+                "readContext": [Function],
+                "useCallback": [Function],
+                "useContext": [Function],
+                "useDebugValue": [Function],
+                "useEffect": [Function],
+                "useImperativeHandle": [Function],
+                "useLayoutEffect": [Function],
+                "useMemo": [Function],
+                "useReducer": [Function],
+                "useRef": [Function],
+                "useState": [Function],
+              },
+              "_element": <ShippingLabelStep1
+                getShippingData={[Function]}
+                setShippingData={Object {}}
+              />,
+              "_firstWorkInProgressHook": null,
+              "_forcedUpdate": false,
+              "_instance": [Circular],
+              "_isReRender": false,
+              "_newState": null,
+              "_numberOfReRenders": 0,
+              "_renderPhaseUpdates": null,
+              "_rendered": <div
+                className="card"
+              >
+                <div
+                  className="h4 card-header"
+                >
+                  Enter the Sender‘s Address
+                </div>
+                <div
+                  className="card-body"
+                >
+                  <RenderFormField
+                    context={[Circular]}
+                    fieldName="name"
+                    id="sender_0"
+                    onChange={[Function]}
+                    placeHolder="Enter name"
+                    type="text"
+                  />
+                  <RenderFormField
+                    context={[Circular]}
+                    fieldName="street"
+                    id="sender_1"
+                    onChange={[Function]}
+                    placeHolder="Enter street"
+                    type="text"
+                  />
+                  <RenderFormField
+                    context={[Circular]}
+                    fieldName="city"
+                    id="sender_2"
+                    onChange={[Function]}
+                    placeHolder="Enter city"
+                    type="text"
+                  />
+                  <RenderFormField
+                    context={[Circular]}
+                    fieldName="state"
+                    id="sender_3"
+                    onChange={[Function]}
+                    placeHolder="Enter state"
+                    type="text"
+                  />
+                  <RenderFormField
+                    context={[Circular]}
+                    fieldName="zip"
+                    id="sender_4"
+                    onChange={[Function]}
+                    placeHolder="Enter zip"
+                    type="text"
+                  />
+                </div>
+              </div>,
+              "_rendering": false,
+              "_updater": [Circular],
+              "_workInProgressHook": null,
+            },
+          },
+        }
+      }
+      fieldName="zip"
+      id="sender_4"
+      key="sender_4"
+      onChange={[Function]}
+      placeHolder="Enter zip"
+      type="text"
+    />
+  </div>
+</div>
+`;

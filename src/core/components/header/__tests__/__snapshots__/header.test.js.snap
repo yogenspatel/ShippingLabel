@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component renders correctly Header Component with snapshot 1`] = `
+<header
+  className="navbar navbar-expand-lg navbar-dark bg-primary"
+>
+  <h1
+    className="h1 text-white m-auto"
+  >
+    Shipping Label Maker
+  </h1>
+</header>
+`;

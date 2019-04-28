@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Step 4 Component renders correctly has called snapshot with ShippingLabel component 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="h4 card-header"
+  >
+    Select the Shipping Option
+  </div>
+  <div
+    className="card-body"
+  >
+    <div
+      className="form-check"
+    >
+      <input
+        checked={true}
+        name="shippingOption_1"
+        onChange={[Function]}
+        type="radio"
+        value="1"
+      />
+      <label
+        className="form-check-label ml-2"
+      >
+        Ground
+      </label>
+    </div>
+    <div
+      className="form-check"
+    >
+      <input
+        checked={false}
+        name="shippingOption_2"
+        onChange={[Function]}
+        type="radio"
+        value="2"
+      />
+      <label
+        className="form-check-label ml-2"
+      >
+        Priority
+      </label>
+    </div>
+  </div>
+</div>
+`;
