@@ -3,7 +3,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Login } from "../index";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 import toJson from "enzyme-to-json";
 
 describe("Login Component renders correctly", () => {
@@ -51,7 +51,6 @@ describe("Login Component renders correctly", () => {
     expect(tree.find(".alert-danger").exists()).toBeTruthy();
   });
   it("has form submit button", () => {
-    const fakeEvent = { preventDefault: () => console.log('preventDefault') };
     const props = {
         username: 'test',
         password: 'test',
@@ -62,5 +61,18 @@ describe("Login Component renders correctly", () => {
     }
     const tree = shallow(<Login {...props} />);
     expect(tree.find(".form-submit").exists()).toBeTruthy();
+
+  });
+  it("has logged in", () => {
+    const props = {
+        username: 'test',
+        password: 'test',
+        handleOnChange: jest.fn,
+        handleOnSubmit: jest.fn,
+        isLoggedIn: true,
+        error: false
+    }
+    const tree = mount(<Login {...props} />);
+    expect(tree.find('.progress-bar').exists()).toBeTruthy();
   });
 });
