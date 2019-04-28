@@ -120,9 +120,14 @@ exports[`Step 5 Component renders correctly has called snapshot with ShippingLab
       className="card"
     >
       <div
-        className="h5 card-header"
+        className="card-header"
       >
-        Shipping Cost: $
+        <span
+          className="h5"
+        >
+          Shipping Cost:
+        </span>
+         $
         3.00
       </div>
     </div>

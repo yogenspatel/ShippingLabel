@@ -1,7 +1,7 @@
 import React from 'react';
 import { shippingRate } from './const';
 
-export const renderError = (errormsg) => (<small className="form-text text-muted alert alert-danger">{errormsg}</small>)
+export const renderError = (errormsg) => (<small className="form-text text-muted alert alert-danger mb-0">{errormsg}</small>)
 
 export const validateFormFields = (obj, context) => {
   const stateValues = Object.values(obj);

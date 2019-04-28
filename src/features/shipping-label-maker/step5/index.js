@@ -77,7 +77,9 @@ class ShippingLabelStep5 extends React.Component {
     if (weight && shippingOption) {
       const shippingCost = calculateShippingCost(weight.weight, shippingOption.shippingOption);
       return (<div className="card">
-        <div className="h5 card-header">Shipping Cost: ${shippingCost}</div>
+        <div className="card-header">
+          <span className="h5">Shipping Cost:</span> ${shippingCost}
+        </div>
       </div>);
     }
     return null;

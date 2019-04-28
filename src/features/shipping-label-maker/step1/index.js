@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { validateFormFields, RenderFormField, setMetadata } from '../../../utilities/utils';
 import { formValidationRules, fromToFormFields } from '../../../utilities/const';
+
 class ShippingLabelStep1 extends React.Component {
   constructor(props) {
     super(props);
