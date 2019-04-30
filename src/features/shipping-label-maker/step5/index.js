@@ -1,3 +1,15 @@
+/**
+ * @type {Component}
+ * Renders fifth step of the shipping label maker.
+ * Renders following sub components.
+ * renderTo - Renders "To" metadata.
+ * this.renderFrom - Renders "From" metadata.
+ * this.renderWeight - Renders "Weight".
+ * this.renderShippingOption - Renders Shipping Option.
+ * this.renderShippingCost - Renders calculated shipping cost.
+ * @property setShippingData - Retrieves shipping data by key which was set by the state in the parent (Wizard) component.
+ */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import { calculateShippingCost } from '../../../utilities/utils';

@@ -1,3 +1,8 @@
+/**
+ * @type {Component}
+ * Shows shipping progress based on step progress
+ * @property {integer} stepProgess
+ */
 import React from 'react';
 import PropTypes from 'prop-types';
 

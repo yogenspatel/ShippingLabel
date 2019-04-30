@@ -1,3 +1,12 @@
+/**
+ * @type {Component}
+ * Render first step of the shipping label maker
+ * Renders input fields - Name, Street, City, State and Zip
+ * Validates all the form fields
+ * @property setShippingData - Retrieves shipping data by key which was set by the state in the parent (Wizard) component.
+ * @property getShippingData - Function callback to set shipping data in a state from parent component.
+ */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import { validateFormFields, RenderFormField, setMetadata } from '../../../utilities/utils';
@@ -30,6 +39,7 @@ class ShippingLabelStep1 extends React.Component {
       });
     }
     else {
+      // Any of the input gets invalidated, init error object, so that it prevents to go to next step.
       this.props.getShippingData(this.state, this.key);
     }
   }

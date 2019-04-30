@@ -1,3 +1,8 @@
+/**
+ * @type {Component}
+ * Renders a Login component with higher order component
+ */
+
 import React from 'react';
 import LoginHOC from './loginHOC';
 import ShippingLabelMaker from '../../../features/shipping-label-maker';

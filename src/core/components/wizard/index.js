@@ -1,3 +1,10 @@
+/**
+ * @type {Component}
+ * Renders a wizard component for shipping label maker
+ * {@property} - steps array
+ * {@property} - onComplete function.
+ */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import ShippingProgress from '../../../features/shipping-progress';
@@ -12,12 +19,17 @@ class Wizard extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-        step: 1,
-        totalSteps: this.props.steps.length,
-        shippingData: {},
-        error: false
+        step: 1, // current step
+        totalSteps: this.props.steps.length, // Total no of Steps
+        shippingData: {}, // Data object contains shipping information traversed through steps of shipping label maker form
+        error: false // Represents error state
       }
     }
+
+    /**
+     * @type {function}
+     * On Click of Prev button, decrement step in a state.
+     */
     prevClick = () => {
       if (this.state.step !== 1) {
         this.setState({
@@ -25,25 +37,45 @@ class Wizard extends React.Component {
         });
       }
     }
+
+    /**
+     * @type {function}
+     * on Click of Next button, increments step in a state. 
+     */
     nextClick = () => {
+      /**
+       * increments step in a state if
+       *    there is no error and
+       *    the current steps is not a last step
+       * */
       if (!this.state.error && this.state.step < this.state.totalSteps) {
         this.setState({
           step: this.state.step + 1
         });
       }
-      if (this.props.steps.length === this.state.step) {
+      // Call onComplete if current step is a last step
+      if (this.state.totalSteps === this.state.step) {
         shippingData.data = this.state.shippingData;
         this.props.onComplete();
       }
     }
-    getWizardContext = (data, from) => {
+
+    /**
+     * @type {function}
+     * Sets state with data if form data is validated otherwise set state with error
+     * @param {object} data Form fields data object.
+     * @param {string} key Defines a key to store data object into state
+     */
+    getWizardContext = (data, key) => {
+      // If error object contains with any key (invalidated any form field), then set error state to true
       if (Object.keys(data.errorObj).length > 0) {
         this.setState({
           error: true
         });
       } else {
+        // All form fields are validated, then store data in a state.
         let dataObj = data;
-        dataObj = { ...this.state.shippingData, [from]: data };
+        dataObj = { ...this.state.shippingData, [key]: data };
         this.setState({
           shippingData: dataObj,
           error: false

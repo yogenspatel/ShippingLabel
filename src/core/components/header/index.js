@@ -1,3 +1,8 @@
+/**
+ * @type {Component}
+ * Renders Shipping Label Header component
+ * @returns {Component}
+ */
 import React from 'react';
 
 export default () => (

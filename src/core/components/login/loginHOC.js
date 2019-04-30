@@ -1,3 +1,9 @@
+/**
+ * Higher order component for Login
+ * @type {Component}
+ * @param {Component} - Component to render with props refined.
+ * @returns {Component} - Returns a component. 
+ */
 import React, { Component } from 'react';
 import { checkUserData } from '../../../utilities/utils';
 
@@ -7,14 +13,19 @@ const LoginHOC = (PassedComponent) => {
       super();
 
       this.state = {
-        username: '',
-        password: '',
-        isLoggedIn: false,
-        formSumbitted: false,
+        username: '', // Represents value of user name field.
+        password: '', // Represents value of password field.
+        isLoggedIn: false, // Represents if user is logged in or not in a state.
+        formSumbitted: false, // Represents form submited or not in a state.
       };
       this.isLoggedIn = false;
     }
 
+    /**
+     * @type {function}
+     * Calls when change event triggered on the form fields
+     * Updates the state on each key stroke
+     */
     handleOnChange = (e) => {
       const { name, value } = e.target;
       this.setState({
@@ -27,6 +38,12 @@ const LoginHOC = (PassedComponent) => {
       }); 
     }
 
+    /**
+     * @type {function}
+     * Calls on submit of form:
+     *    Sets state formSumbitted.
+     *    Verifies if entered username/password is correct or not and sets isLoggedIn state accordingly.
+     */
     handleOnSubmit = (e) => {
       e.preventDefault();
       const { username, password } = this.state;
@@ -42,7 +59,7 @@ const LoginHOC = (PassedComponent) => {
 
     render() {
       const { username, password, isLoggedIn, formSumbitted } = this.state;
-      const error = !isLoggedIn && formSumbitted;
+      const error = formSumbitted && !isLoggedIn; // If form submitted and username/password is incorrect, set error to true
       return (
         <PassedComponent
           username={username}

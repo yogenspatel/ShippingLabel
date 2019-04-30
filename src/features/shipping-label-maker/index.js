@@ -1,3 +1,9 @@
+/**
+ * @type {Component}
+ * Renders a Shipping label maker which is resposible of following:
+ * Render a Wizard component if all steps are not done.
+ * Render a Shipping Label compoennt if all steps are done.
+ */
 import React from 'react';
 import Wizard from '../../core/components/wizard'
 import ShippingLabel from '../shipping-label';

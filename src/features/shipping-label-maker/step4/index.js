@@ -1,3 +1,11 @@
+/**
+ * @type {Component}
+ * Render fourth step of the shipping label maker
+ * Renders 2 radio fields with shipping option - Ground, Priority
+ * @property setShippingData - Retrieves shipping data by key which was set by the state in the parent (Wizard) component.
+ * @property getShippingData - Function callback to set shipping data in a state from parent component.
+ */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -13,6 +21,7 @@ class ShippingLabelStep4 extends React.Component {
   }
 
   componentDidMount() {
+    // If data is set, retrieve form fields data
     if (this.props.setShippingData && this.props.setShippingData[this.key]) {
       const { shippingOption } = this.props.setShippingData[this.key];
       this.setState({
@@ -20,9 +29,6 @@ class ShippingLabelStep4 extends React.Component {
       }, () => {
         this.props.getShippingData(this.state, this.key);
       });
-    }
-    else {
-      this.props.getShippingData(this.state, this.key);
     }
   }
 

@@ -1,3 +1,7 @@
+/**
+ * Renders App componemt with Shipping Header and Login components
+ * @type {Compoennt}
+ */
 import React from 'react';
 import Login from './core/components/login';
 import './App.css';
