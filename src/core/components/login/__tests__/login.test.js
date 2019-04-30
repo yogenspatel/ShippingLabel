@@ -2,7 +2,7 @@
 
 import React from "react";
 import ReactDOM from "react-dom";
-import { Login } from "../index";
+import { Login, ShippingLabelMaker } from "../index";
 import { shallow, mount } from "enzyme";
 import toJson from "enzyme-to-json";
 
@@ -73,6 +73,6 @@ describe("Login Component renders correctly", () => {
         error: false
     }
     const tree = mount(<Login {...props} />);
-    expect(tree.find('.progress-bar').exists()).toBeTruthy();
+    expect(tree.find(ShippingLabelMaker).exists()).toBeTruthy();
   });
 });

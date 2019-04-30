@@ -25,6 +25,20 @@ export const validateFormFields = (obj, context) => {
   });  
     
 }
+
+function onBlur({context, fieldName}) {
+  if(!context.state[fieldName]) {
+    context.setState({
+      [`touched${fieldName}`]: true
+    });
+  }
+  else {
+    context.setState({
+      [`touched${fieldName}`]: false
+  });
+  }
+}
+
 export const RenderFormField = ({ id, fieldName, type, placeHolder, onChange, context }) => (
   <div className="input-group input-group-lg mb-3">
     <div className="input-group-prepend">
@@ -37,9 +51,10 @@ export const RenderFormField = ({ id, fieldName, type, placeHolder, onChange, co
       type={type}
       placeholder={placeHolder}
       onChange={onChange}
+      onBlur={() => onBlur({context, fieldName})}
       value={context.state[fieldName]}
     />
-    {context.state.errorObj[fieldName] && renderError(`${fieldName} is required !`)}
+    {context.state[`touched${fieldName}`] && context.state.errorObj[fieldName] && renderError(`${fieldName} is required !`)}
   </div>
 );
 

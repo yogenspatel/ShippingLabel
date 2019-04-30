@@ -13,7 +13,6 @@ class ShippingLabelStep4 extends React.Component {
   }
 
   componentDidMount() {
-    this.props.getShippingData(this.state, this.key);
     if (this.props.setShippingData && this.props.setShippingData[this.key]) {
       const { shippingOption } = this.props.setShippingData[this.key];
       this.setState({
@@ -21,6 +20,9 @@ class ShippingLabelStep4 extends React.Component {
       }, () => {
         this.props.getShippingData(this.state, this.key);
       });
+    }
+    else {
+      this.props.getShippingData(this.state, this.key);
     }
   }
 

@@ -54,5 +54,5 @@ class Login extends React.Component {
     ) : <ShippingLabelMaker />; 
   }
 } 
-export { Login };
+export { Login, ShippingLabelMaker };
 export default (LoginHOC(Login));
